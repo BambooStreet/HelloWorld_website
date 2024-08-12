@@ -1,0 +1,11 @@
+/* 브랜드 텍스트(사이트 제목) 색상 변경 */
+.navbar-default .navbar-brand {
+    color: #bdbddd; /* 원하는 색상 코드로 변경 */
+}
+
+
+.fa-circle.text-primary {
+    color: #4a4ab3; /* 원하는 색상 코드로 변경 */
+}
+
+
