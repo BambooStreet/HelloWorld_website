@@ -1,5 +1,5 @@
 ---
-title: TTS
+title: TTS/STT
 subtitle: Website Design
 layout: default
 modal-id: 1
