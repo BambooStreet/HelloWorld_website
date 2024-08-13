@@ -100,3 +100,6 @@ compress_html:
   blanklines: false
   ignore:
     envs: [development]
+
+
+github: [metadata]
