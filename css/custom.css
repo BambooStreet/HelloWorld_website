@@ -59,6 +59,35 @@
     cursor: pointer;
 }
 
+
+.content-image {
+    padding: 20px;
+    text-align: center;
+}
+
+.content-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content-text {
+    padding: 20px;
+}
+
+@media (max-width: 500px) {
+    .content-image, .content-text {
+        margin-bottom: 20px;
+    }
+}
+
+/* 이미지 크기 */
+.post-img {
+    max-width: 100%;
+    height: auto;
+    width: 500px; /* 원하는 너비 */
+}
+
+
 /* 그리드 반응형 디자인 */
 .portfolio-item {
     transition: all 0.3s ease;

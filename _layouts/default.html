@@ -18,7 +18,7 @@
     
     {% include about.html %}
     {% include team.html %}
-    {% include clients.html %}
+    <!-- {% include clients.html %} -->
     {% include contact.html %}
     {% include footer.html %}
     {% include modals.html %}
@@ -29,17 +29,17 @@
 <!-- 컨텐츠 박스 코드 -->
 <script>
   function showPost(id) {
-      var contentBox = document.getElementById('content-box');
-      var defaultMessage = document.getElementById('default-message');
-      var postContent = document.getElementById('post-content-' + id);
-      
-      if (defaultMessage) {
-          defaultMessage.style.display = 'none';
-      }
-      
-      if (postContent) {
-          contentBox.innerHTML = postContent.innerHTML;
-      }
+    var contentImage = document.getElementById('content-image');
+    var contentText = document.getElementById('content-text');
+    var postContent = document.getElementById('post-content-' + id);
+    
+    if (postContent) {
+        var postImage = postContent.querySelector('.post-image');
+        var postText = postContent.querySelector('.post-text');
+        
+        contentImage.innerHTML = postImage.innerHTML;
+        contentText.innerHTML = postText.innerHTML;
+    }
       
       // 컨텐츠 박스로 스크롤
       // document.getElementById('content-display').scrollIntoView({behavior: 'smooth'});
