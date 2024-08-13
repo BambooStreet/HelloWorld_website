@@ -31,7 +31,7 @@
                     <div class="col-lg-6">
                         <div id="content-image" class="content-image">
                             {% assign first_post = site.posts.first %}
-                            <img src="{{ site.baseurl }}{{ first_post.image }}" alt="{{ first_post.title }}" style="width: 500px; height: 300px;">
+                            <img src="{{ site.baseurl }}{{ first_post.image }}" alt="{{ first_post.title }}" style="width: 600px; height: 400px;">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -50,7 +50,7 @@
     {% for post in site.posts %}
     <div id="post-content-{{ post.modal-id }}" style="display: none;">
         <div class="post-image">
-            <img src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}" style="width: 500px; height: 300px;">
+            <img src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}" style="width: 600px; height: 400px;">
         </div>
         <div class="post-text">
             {{ post.content | markdownify }}

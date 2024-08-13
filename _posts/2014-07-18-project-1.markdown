@@ -10,7 +10,7 @@ alt: image-alt
 project-date: April 2014
 client: Start Bootstrap
 category: Web Development
-image: /img/posts/1/1.jpg
+image: /img/posts/1/chat.png
 ---
 
 
