@@ -11,7 +11,7 @@ timezone: Asia/Seoul
 
 # Team names, titles and social links
 people:
-- name: Kay Garland
+- name: 홍석주
   pic: 1
   position: Lead Designer
   social:
@@ -22,7 +22,7 @@ people:
     - title: stack-overflow
       url: #
 
-- name: Larry Parker
+- name: 황예원
   pic: 2
   position: Lead Marketer
   social:
@@ -33,8 +33,30 @@ people:
     - title: linkedin
       url: #
 
-- name: Diana Petersen
+- name: 이윤서
   pic: 3
+  position: Lead Developer
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: 
+
+- name: 이승우
+  pic: 4
+  position: Lead Developer
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+- name: 황주훈
+  pic: 5
   position: Lead Developer
   social:
     - title: twitter
