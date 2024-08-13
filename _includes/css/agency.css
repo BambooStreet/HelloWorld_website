@@ -407,10 +407,17 @@ section h3.section-subheading {
     padding: 25px;
     max-width: 100%;
     text-align: center;
-    background-color: #fff;
+    background-color: #4a4ab3;
     border-radius: 10px; /* 모서리를 둥글게 만듭니다 */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과를 추가합니다 */
     transition: all 0.3s ease; /* 부드러운 전환 효과를 위해 추가합니다 */
+}
+
+.portfolio-caption {
+    background-color: #4a4ab3;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    padding: 20px;
 }
 
 #portfolio .portfolio-item .portfolio-caption:hover {
@@ -435,6 +442,12 @@ section h3.section-subheading {
 
 #portfolio * {
     z-index: 2;
+}
+
+#portfolio .portfolio-item.selected .portfolio-caption {
+    background-color: #8b8ae7; /* 선택된 아이템의 배경색 */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
 
 @media(min-width:767px) {

@@ -30,6 +30,12 @@
 <!-- 컨텐츠 박스 코드 -->
 <script>
   function showPost(id) {
+    // 모든 portfolio-item에서 'selected' 클래스 제거
+    $('.portfolio-item').removeClass('selected');
+    
+    // 클릭된 아이템에 'selected' 클래스 추가
+    $(`.portfolio-item:has(a[onclick="showPost('${id}')"])`).addClass('selected');
+
     var contentImage = document.getElementById('content-image');
     var contentText = document.getElementById('content-text');
     var postContent = document.getElementById('post-content-' + id);
