@@ -13,58 +13,43 @@ timezone: Asia/Seoul
 people:
 - name: 홍석주
   pic: 1
-  position: Lead Designer
+  position: AI
   social:
-    - title: twitter
+    - title: github
       url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
+
 
 - name: 황예원
   pic: 2
-  position: Lead Marketer
+  position: AI
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: linkedin
-      url: #
+    - title: github
+      url: https://github.com/yeowonh
+
 
 - name: 이윤서
   pic: 3
-  position: Lead Developer
+  position: FE
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: 
+    - title: github
+      url: https://github.com/yunseoLee0343
+
 
 - name: 이승우
   pic: 4
-  position: Lead Developer
+  position: BE
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+    - title: github
+      url: https://github.com/ls-rain
+
 
 - name: 황주훈
   pic: 5
-  position: Lead Developer
+  position: BE
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+    - title: github
+      url: https://github.com/jjjuhoon
+
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
