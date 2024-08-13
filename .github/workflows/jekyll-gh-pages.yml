@@ -44,12 +44,16 @@ jobs:
           
       - name: Create _headers file
         run: |
-          echo "/*" > _site/_headers
-          echo "  Cache-Control: no-cache, no-store, must-revalidate" >> _site/_headers
-          
+          echo "/*" > _headers
+          echo "  Cache-Control: no-store, no-cache, must-revalidate, max-age=0" >> _headers
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-
+        with:
+          path: |
+            ./_site
+            ./_headers
+            
   # Deployment job
   deploy:
     environment:
