@@ -30,14 +30,13 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div id="content-image" class="content-image">
-                            <!-- 기본 이미지 메시지 -->
-                            <!-- <p id="default-image-message">포스트를 선택하면 여기에 이미지가 표시됩니다.</p> -->
+                            {% assign first_post = site.posts.first %}
+                            <img src="{{ site.baseurl }}{{ first_post.image }}" alt="{{ first_post.title }}" style="width: 500px; height: 300px;">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div id="content-text" class="content-text">
-                            <!-- 기본 텍스트 메시지 -->
-                            <!-- <p id="default-text-message">포스트를 선택하면 여기에 내용이 표시됩니다.</p> -->
+                            {{ first_post.content | markdownify}}
                         </div>
                     </div>
                 </div>

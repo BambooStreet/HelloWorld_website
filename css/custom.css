@@ -96,16 +96,6 @@
 }
 
 
-/* 그리드 반응형 디자인 */
-
-.portfolio-caption {
-    background-color: #4a4ab3;
-    color: #ffffff;
-    transition: background-color 0.3s ease;
-    padding: 20px;
-}
-
-
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
