@@ -42,11 +42,10 @@ jobs:
           source: ./
           destination: ./_site
           
-      - name: Copy _headers file
+      - name: Create _headers file
         run: |
-          if [ -f _headers ]; then
-            cp _headers _site/
-          fi
+          echo "/*" > _site/_headers
+          echo "  Cache-Control: no-cache, no-store, must-revalidate" >> _site/_headers
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
