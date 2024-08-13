@@ -24,5 +24,26 @@
     {% include modals.html %}
     {% include js.html %}
 <!-- https://www.notion.so/yeowonh/Tech-wiki-b1339f5b29bf416d9b966b27cbfc2ac1 링크 추가하기 -->
-    </body>
+  
+
+<!-- 컨텐츠 박스 코드 -->
+<script>
+  function showPost(id) {
+      var contentBox = document.getElementById('content-box');
+      var defaultMessage = document.getElementById('default-message');
+      var postContent = document.getElementById('post-content-' + id);
+      
+      if (defaultMessage) {
+          defaultMessage.style.display = 'none';
+      }
+      
+      if (postContent) {
+          contentBox.innerHTML = postContent.innerHTML;
+      }
+      
+      // 컨텐츠 박스로 스크롤
+      // document.getElementById('content-display').scrollIntoView({behavior: 'smooth'});
+    }
+    </script>
+  </body>
 </html>

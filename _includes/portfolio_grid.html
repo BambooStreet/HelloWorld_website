@@ -10,20 +10,43 @@
             <div class="row">
             {% for post in site.posts %}
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+                    <a href="javascript:void(0);" class="portfolio-link" onclick="showPost('{{ post.modal-id }}')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/{{ post.thumbnail }}" class="img-responsive img-centered" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>{{ post.title }}</h4>
-                        <!-- <p class="text-muted">{{ post.subtitle }}</p> -->
                     </div>
                 </div>
             {% endfor %}
             </div>
         </div>
+        <!-- Content Display Section -->
+        <section id="content-display" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="content-box" class="content-box">
+                            <!-- 내용이 여기에 표시됩니다 -->
+                            <p>포스트를 선택하면 여기에 내용이 표시됩니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
+
+    
+
+    <!-- Hidden Post Contents -->
+    {% for post in site.posts %}
+    <div id="post-content-{{ post.modal-id }}" style="display: none;">
+        <h2>{{ post.title }}</h2>
+        <div class="post-content">
+            {{ post.content | markdownify }}
+        </div>
+    </div>
+    {% endfor %}

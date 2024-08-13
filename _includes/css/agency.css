@@ -378,11 +378,11 @@ section h3.section-subheading {
     background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .9);
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+/* #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
     opacity: 1;
-}
+} */
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+/* #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -391,7 +391,7 @@ section h3.section-subheading {
     text-align: center;
     font-size: 20px;
     color: #fff;
-}
+} */
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
     margin-top: -12px;
@@ -405,18 +405,29 @@ section h3.section-subheading {
 #portfolio .portfolio-item .portfolio-caption {
     margin: 0 auto;
     padding: 25px;
-    max-width: 400px;
+    max-width: 100%;
     text-align: center;
     background-color: #fff;
+    border-radius: 10px; /* 모서리를 둥글게 만듭니다 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과를 추가합니다 */
+    transition: all 0.3s ease; /* 부드러운 전환 효과를 위해 추가합니다 */
+}
+
+#portfolio .portfolio-item .portfolio-caption:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* 호버 시 그림자를 더 강하게 만듭니다 */
+    transform: translateY(-5px); /* 호버 시 살짝 위로 올라가는 효과를 줍니다 */
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
     margin: 0;
     text-transform: none;
+    overflow: hidden; /* 'none'이 아닌 'hidden'으로 수정했습니다 */
+    text-overflow: ellipsis; /* 긴 텍스트의 경우 말줄임표를 표시합니다 */
+    white-space: nowrap; /* 제목이 한 줄로 표시되도록 합니다 */
 }
 
 #portfolio .portfolio-item .portfolio-caption p {
-    margin: 0;
+    margin: 10px 0 0; /* 제목과 본문 사이에 약간의 간격을 줍니다 */
     font-family: {{ site.data.template.font.secondary }};
     font-size: 16px;
     font-style: italic;
