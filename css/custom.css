@@ -175,3 +175,22 @@ body {
     color: #666;
 }
 
+
+/* 기대효과 */
+#effects {
+    padding: 100px 0;
+}
+
+.effect-item {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.effect-chart {
+    margin-bottom: 20px;
+}
+
+.effect-item h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

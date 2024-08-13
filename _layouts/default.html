@@ -44,7 +44,12 @@
       
       // 컨텐츠 박스로 스크롤
       // document.getElementById('content-display').scrollIntoView({behavior: 'smooth'});
-    }
-    </script>
+  }
+  // 페이지 로드 시 첫 번째 포스트 표시
+  document.addEventListener('DOMContentLoaded', function() {
+    var firstPostId = document.querySelector('.portfolio-item').getAttribute('onclick').match(/'(.+?)'/)[1];
+    showPost(firstPostId);
+  });
+  </script>
   </body>
 </html>
