@@ -103,3 +103,6 @@ compress_html:
 
 
 github: [metadata]
+
+include:
+  - _headers
