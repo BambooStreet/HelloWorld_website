@@ -4,7 +4,7 @@ subtitle: Website Design
 layout: default
 modal-id: 2
 date: 2014-07-17
-image: /img/posts/2/callbot_gif.gif
+image: /img/posts/2/2.gif
 ---
 
 ## 보다 쉽고 빠른 

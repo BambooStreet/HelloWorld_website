@@ -4,7 +4,7 @@ subtitle: Website Design
 layout: default
 modal-id: 3
 date: 2014-07-16
-image: /img/posts/3/reservation_gif.gif
+image: /img/posts/3/3-ezgif.com-crop.gif
 
 ---
 ## 오프라인 상담도 쉽고 빠르게!

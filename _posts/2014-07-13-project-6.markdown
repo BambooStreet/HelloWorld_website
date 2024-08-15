@@ -10,7 +10,7 @@ alt: image-alt
 project-date: April 2014
 client: Start Bootstrap
 category: Web Development
-image: \img\posts\6\review.png
+image: \img\posts\6\6.png
 ---
 
 ## 이 회사 괜찮을까요..?
