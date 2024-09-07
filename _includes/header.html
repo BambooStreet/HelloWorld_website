@@ -1,71 +1,301 @@
-<!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">{{site.title}}</a>
-            </div>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 39px 0;
+        background-color: #FFFFFF;
+        z-index: 1000;
+        }
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Details</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#effects">effects</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#team">Team</a>
-                    </li>
-                    <!-- <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li> -->
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://bamboostreet.github.io/HelloWorld_website_EN/" onclick="changeLanguage('en')">English</a></li>
-                            <li><a href="https://bamboostreet.github.io/HelloWorld_website/" onclick="changeLanguage('ko')">한국어</a></li>
-                            <li><a href="#" onclick="changeLanguage('vi')">Tiếng Việt(준비중)</a></li>
-                            <!-- 필요에 따라 더 많은 언어를 추가할 수 있습니다 -->
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+        nav {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    <!-- Header -->
+        ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-right: 60px;
+            position: relative;
+        }
+
+        li:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        li::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 8px;
+            background-color: #D9D9D9;
+            border-radius: 50%;
+        }
+
+        li:hover::after,
+        li.active::after {
+            background-color: #10498E;
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            cursor: pointer;
+        }
+
+        .fi-rr-angle-small-down {
+            margin-left: 10px;
+            width: 24px;
+            height: 24px;
+            background-color: #374957;
+            mask: url('path-to-icon/angle-small-down.svg') no-repeat center;
+            -webkit-mask: url('path-to-icon/angle-small-down.svg') no-repeat center;
+        }
+
+        @media (max-width: 1024px) {
+            nav {
+                padding: 0 20px;
+            }
+
+            li {
+                margin-right: 30px;
+            }
+
+            a, .language-selector {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            li {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            li::after {
+                display: none;
+            }
+
+            .language-selector {
+                margin-top: 20px;
+            }
+        }
+        @font-face {
+        font-family: 'Cafe24 Ohsquare OTF';
+        src: url('path-to-font/Cafe24Ohsquare.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Cafe24 Ohsquare air OTF';
+            src: url('path-to-font/Cafe24OhsquareAir.otf') format('opentype');
+        }
+
+        #hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-content {
+            position: relative;
+            width: 836px;
+            height: 543px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            position: relative;
+            font-size: 200px;
+            line-height: 254px;
+            color: #002E4F;
+            text-align: center;
+        }
+
+        .hello {
+            position: absolute;
+            top: -204px;
+            left: 21px;
+            font-family: 'Cafe24 Ohsquare air OTF', sans-serif;
+            font-weight: 300;
+            opacity: 0.5;
+        }
+
+        .world {
+            font-family: 'Cafe24 Ohsquare OTF', sans-serif;
+            font-weight: 400;
+        }
+
+        .underline {
+            width: 655px;
+            height: 3px;
+            background-color: #002E4F;
+            margin-top: -40px;
+        }
+
+        p {
+            margin-top: 77px;
+            font-family: 'Pretendard', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: #000000;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                width: 90%;
+                height: auto;
+            }
+
+            h1 {
+                font-size: 150px;
+                line-height: 190px;
+            }
+
+            .hello {
+                top: -153px;
+                left: 16px;
+            }
+
+            .underline {
+                width: 80%;
+                margin-top: -30px;
+            }
+
+            p {
+                margin-top: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 100px;
+                line-height: 127px;
+            }
+
+            .hello {
+                top: -102px;
+                left: 10px;
+            }
+
+            .underline {
+                margin-top: -20px;
+            }
+
+            p {
+                margin-top: 30px;
+                font-size: 18px;
+            }
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloWorld - 외국인 근로자 지원 플랫폼</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Pretendard:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">입국부터 귀국까지, <br>
-                    외국인 노동자의 여정을 책임지는 통합 플랫폼</div>
-                <div class="intro-heading">HelloWorld</div>
-                <!-- <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a> -->
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#effects">Effects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+            <div class="language-selector">
+                <span>Language</span>
+                <i class="fi-rr-angle-small-down"></i>
+                <!-- 언어 선택 드롭다운 메뉴 추가 -->
             </div>
-        </div>
+        </nav>
     </header>
-<!--
-        {% for page in site.pages %}
-          {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
-        {% endfor %}
- -->
 
+    <main>
+        <section id="hero">
+            <h1><span class="hello">hello</span>World</h1>
+            <p>입국부터 귀국까지, 외국인 근로자의 여정을 책임지는 통합 플랫폼</p>
+        </section>
+
+        <section id="problems">
+            <h2>외국인 근로자, 어떤 어려움을 겪고 있을까요?</h2>
+            <p>한국에서 일하고자 하는 외국인 근로자는 늘어나고 있지만, 이를 지원하는 센터의 인력은 줄어들어 많은 외국인 근로자들이 어려움을 겪고 있습니다.</p>
+            <!-- 뉴스 기사 이미지 및 텍스트 추가 -->
+        </section>
+
+        <section id="services">
+            <h2>HelloWorld 서비스를 소개합니다!</h2>
+            <p>외국인 근로자를 위한 통합 정착 지원 서비스를 지원합니다.</p>
+            <!-- 서비스 목록 추가 -->
+        </section>
+
+        <section id="effects">
+            <h2>HelloWorld 서비스의 기대효과</h2>
+            <p>HelloWorld가 만들어낼 긍정적인 변화</p>
+            <!-- 기대효과 목록 추가 -->
+        </section>
+
+        <section id="about">
+            <h2>About HelloWorld</h2>
+            <p>HelloWorld의 여정</p>
+            <!-- 타임라인 또는 성과 목록 추가 -->
+        </section>
+
+        <section id="team">
+            <h2>팀원소개</h2>
+            <!-- 팀원 프로필 추가 -->
+        </section>
+    </main>
+
+    <footer>
+        <p>HelloWorld</p>
+    </footer>
+</body>
+</html>
