@@ -1,246 +1,58 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <style>
-        header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 39px 0;
-        background-color: #FFFFFF;
-        z-index: 1000;
-        }
+<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">{{site.title}}</a>
+            </div>
 
-        nav {
-            max-width: 1440px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Details</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#effects">effects</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    <!-- <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li> -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://bamboostreet.github.io/HelloWorld_website_EN/" onclick="changeLanguage('en')">English</a></li>
+                            <li><a href="https://bamboostreet.github.io/HelloWorld_website/" onclick="changeLanguage('ko')">한국어</a></li>
+                            <li><a href="#" onclick="changeLanguage('vi')">Tiếng Việt(준비중)</a></li>
+                            <!-- 필요에 따라 더 많은 언어를 추가할 수 있습니다 -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-        ul {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            margin-right: 60px;
-            position: relative;
-        }
-
-        li:last-child {
-            margin-right: 0;
-        }
-
-        a {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-            color: #000000;
-            text-decoration: none;
-        }
-
-        li::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 8px;
-            height: 8px;
-            background-color: #D9D9D9;
-            border-radius: 50%;
-        }
-
-        li:hover::after,
-        li.active::after {
-            background-color: #10498E;
-        }
-
-        .language-selector {
-            display: flex;
-            align-items: center;
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-            color: #000000;
-            cursor: pointer;
-        }
-
-        .fi-rr-angle-small-down {
-            margin-left: 10px;
-            width: 24px;
-            height: 24px;
-            background-color: #374957;
-            mask: url('path-to-icon/angle-small-down.svg') no-repeat center;
-            -webkit-mask: url('path-to-icon/angle-small-down.svg') no-repeat center;
-        }
-
-        @media (max-width: 1024px) {
-            nav {
-                padding: 0 20px;
-            }
-
-            li {
-                margin-right: 30px;
-            }
-
-            a, .language-selector {
-                font-size: 18px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            ul {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            li {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-
-            li::after {
-                display: none;
-            }
-
-            .language-selector {
-                margin-top: 20px;
-            }
-        }
-        @font-face {
-        font-family: 'Cafe24 Ohsquare OTF';
-        src: url('path-to-font/Cafe24Ohsquare.otf') format('opentype');
-        }
-
-        @font-face {
-            font-family: 'Cafe24 Ohsquare air OTF';
-            src: url('path-to-font/Cafe24OhsquareAir.otf') format('opentype');
-        }
-
-        #hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-content {
-            position: relative;
-            width: 836px;
-            height: 543px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h1 {
-            position: relative;
-            font-size: 200px;
-            line-height: 254px;
-            color: #002E4F;
-            text-align: center;
-        }
-
-        .hello {
-            position: absolute;
-            top: -204px;
-            left: 21px;
-            font-family: 'Cafe24 Ohsquare air OTF', sans-serif;
-            font-weight: 300;
-            opacity: 0.5;
-        }
-
-        .world {
-            font-family: 'Cafe24 Ohsquare OTF', sans-serif;
-            font-weight: 400;
-        }
-
-        .underline {
-            width: 655px;
-            height: 3px;
-            background-color: #002E4F;
-            margin-top: -40px;
-        }
-
-        p {
-            margin-top: 77px;
-            font-family: 'Pretendard', sans-serif;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-            text-align: center;
-            color: #000000;
-        }
-
-        @media (max-width: 1024px) {
-            .hero-content {
-                width: 90%;
-                height: auto;
-            }
-
-            h1 {
-                font-size: 150px;
-                line-height: 190px;
-            }
-
-            .hello {
-                top: -153px;
-                left: 16px;
-            }
-
-            .underline {
-                width: 80%;
-                margin-top: -30px;
-            }
-
-            p {
-                margin-top: 50px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 100px;
-                line-height: 127px;
-            }
-
-            .hello {
-                top: -102px;
-                left: 10px;
-            }
-
-            .underline {
-                margin-top: -20px;
-            }
-
-            p {
-                margin-top: 30px;
-                font-size: 18px;
-            }
-        }
-
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HelloWorld - 외국인 근로자 지원 플랫폼</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Pretendard:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <!-- Header -->
     <header>
         <nav>
             <ul>
