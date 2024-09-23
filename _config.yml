@@ -27,12 +27,12 @@ people:
       url: https://github.com/yeowonh
 
 
-- name: 이윤서
-  pic: 3
-  position: FE
+- name: 황주훈
+  pic: 5
+  position: BE
   social:
     - title: github
-      url: https://github.com/yunseoLee0343
+      url: https://github.com/jjjuhoon
 
 
 - name: 이승우
@@ -42,13 +42,28 @@ people:
     - title: github
       url: https://github.com/ls-rain
 
-
-- name: 황주훈
-  pic: 5
-  position: BE
+- name: 이윤서
+  pic: 3
+  position: FE
   social:
     - title: github
-      url: https://github.com/jjjuhoon
+      url: https://github.com/yunseoLee0343
+
+
+- name: 조은진
+  pic: 6
+  position: PM
+  social:
+    - title: github
+      url: https://github.com/ceunjinn
+
+
+- name: 나예은
+  pic: 7
+  position: Design
+  social:
+    - title: github
+      url: https://github.com/yaeun
 
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
